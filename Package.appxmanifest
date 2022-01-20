@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+  <Identity Publisher="CN=LDSTEST" Version="2021.1.1.0"  Name="LuckyDuckSoftwareLLC.CleanOutforOutlook.com"/>
+  <mp:PhoneIdentity PhoneProductId="dd2c811e-5086-49ec-a24e-8d9b2fc499f2" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>UWP_MSAL_Win11</DisplayName>
+    <PublisherDisplayName>Lucky Duck Software LLC</PublisherDisplayName>
+    <Logo>PackageLogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="UWP_MSAL_Win11.App">
+      <uap:VisualElements DisplayName="UWP_MSAL_Win11" Description="Test app for MSAL in UWP on Win11" BackgroundColor="steelBlue" Square150x150Logo="assets\MediumTile.png" Square44x44Logo="assets\AppIcon.png">
+        <uap:DefaultTile ShortName="assets\UWP_MSAL_Win11"  Square71x71Logo="assets\SmallTile.png" Wide310x150Logo="assets\WideTile.png" Square310x310Logo="assets\LargeTile.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+            <uap:ShowOn Tile="wide310x150Logo" />
+            <uap:ShowOn Tile="square310x310Logo" />
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+        <uap:SplashScreen BackgroundColor="steelBlue"  Image="assets\splash-sdk.png"/>
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="landscape" />
+          <uap:Rotation Preference="landscapeFlipped" />
+        </uap:InitialRotationPreference>
+        <uap:LockScreen BadgeLogo="assets\BadgeLogo.png" Notification="badge"/>
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

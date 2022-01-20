@@ -1,0 +1,23 @@
+﻿<Application
+    x:Class="UWP_MSAL_Win11.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <!-- removed 5/31/20 RequestedTheme="Light"> -->
+    
+    <Application.Resources>
+
+        <ResourceDictionary>
+            <!-- Add your client id here. -->
+            <x:String x:Key="ida:ClientID">92ce3666-8dfd-429e-9b29-9b8f1c96dda5</x:String>
+            <x:String x:Key="ida:AADInstance">https://login.microsoftonline.com/</x:String>
+            <x:String x:Key="ida:PublicClientRedirectUri">https://login.microsoftonline.com/common/oauth2/nativeclient</x:String>
+            <x:String x:Key="ida:AccountType">consumers</x:String>
+            
+            <ResourceDictionary.MergedDictionaries>
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+
+</Application>
