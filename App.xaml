@@ -11,7 +11,8 @@
             <!-- Add your client id here. -->
             <x:String x:Key="ida:ClientID">92ce3666-8dfd-429e-9b29-9b8f1c96dda5</x:String>
             <x:String x:Key="ida:AADInstance">https://login.microsoftonline.com/</x:String>
-            <x:String x:Key="ida:PublicClientRedirectUri">https://login.microsoftonline.com/common/oauth2/nativeclient</x:String>
+            <!-- <x:String x:Key="ida:PublicClientRedirectUri">https://login.microsoftonline.com/common/oauth2/nativeclient</x:String> -->
+            <x:String x:Key="ida:PublicClientRedirectUri">ms-appx-web://microsoft.aad.brokerplugin/S-1-15-2-4221286904-3597273188-2457802502-107407685-3811530160-983727362-4069615653</x:String>
             <x:String x:Key="ida:AccountType">consumers</x:String>
             
             <ResourceDictionary.MergedDictionaries>

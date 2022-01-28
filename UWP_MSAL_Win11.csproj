@@ -33,6 +33,7 @@
     <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
     <PackageCertificateThumbprint>C619115C7C1747D82D57BBA9A5DE79B76883AE73</PackageCertificateThumbprint>
     <PackageCertificateKeyFile />
+    <UseDotNetNativeSharedAssemblyFrameworkPackage>false</UseDotNetNativeSharedAssemblyFrameworkPackage>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -117,6 +118,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AuthenticationHelperMSAL_WAM.cs" />
     <Compile Include="AuthenticationHelperMSAL.cs" />
     <Compile Include="Converters\NullableBooleanToBooleanConverter.cs" />
     <Compile Include="MainPage.xaml.cs">
