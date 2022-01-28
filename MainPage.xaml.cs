@@ -78,7 +78,7 @@ namespace UWP_MSAL_Win11
 
                 try
                 {
-                    AuthenticationHelperMSAL myAH = new AuthenticationHelperMSAL();
+                    AuthenticationHelperMSAL_WAM myAH = new AuthenticationHelperMSAL_WAM();
                     string sAccountType = string.Empty;
                     if ((bool)optConsumer.IsChecked)
                         sAccountType = "consumers";
@@ -138,8 +138,20 @@ namespace UWP_MSAL_Win11
             try
             {
                 cmdLogout.IsEnabled = false;
-                AuthenticationHelperMSAL myAH = new AuthenticationHelperMSAL();
-                bSuccess = await myAH.SignOutMSAL();
+                AuthenticationHelperMSAL_WAM myAH = new AuthenticationHelperMSAL_WAM();
+
+                string sAccountType = string.Empty;
+                if ((bool)optConsumer.IsChecked)
+                    sAccountType = "consumers";
+                else
+                {
+                    if ((bool)optBusiness.IsChecked)
+                        sAccountType = "organizations";
+                    else
+                        sAccountType = "common";
+                }
+
+                bSuccess = await myAH.SignOutMSAL(sAccountType);
             }
             catch (Exception ex)
             {
